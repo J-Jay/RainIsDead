@@ -18,7 +18,15 @@
 		2E3D0A5A1830F6CA00A119B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */; };
 		2E3D0A5B1830F6CA00A119B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A431830F6CA00A119B4 /* UIKit.framework */; };
 		2E3D0A631830F6CA00A119B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A611830F6CA00A119B4 /* InfoPlist.strings */; };
-		2E3D0A651830F6CA00A119B4 /* RainIsDeadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A641830F6CA00A119B4 /* RainIsDeadTests.m */; };
+		2E3D0A711830F74300A119B4 /* RIDPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A701830F74300A119B4 /* RIDPlace.m */; };
+		2E3D0A751830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A741830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m */; };
+		2E3D0A771830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */; };
+		2E3D0A7A1830FEF300A119B4 /* RIDCompletionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A791830FEF300A119B4 /* RIDCompletionHelper.m */; };
+		2E3D0A7C1831362E00A119B4 /* RIDPlaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7B1831362E00A119B4 /* RIDPlaceTest.m */; };
+		2E3D0A7E1831377200A119B4 /* RIDCompletionHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */; };
+		2E3D0A801831387800A119B4 /* placeCompletionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7F1831387800A119B4 /* placeCompletionResponse.json */; };
+		2E3D0A8518313F4E00A119B4 /* RIDPlaceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */; };
+		2E3D0A8618313F4E00A119B4 /* RIDPlaceListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +55,19 @@
 		2E3D0A581830F6CA00A119B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2E3D0A601830F6CA00A119B4 /* RainIsDeadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RainIsDeadTests-Info.plist"; sourceTree = "<group>"; };
 		2E3D0A621830F6CA00A119B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2E3D0A641830F6CA00A119B4 /* RainIsDeadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RainIsDeadTests.m; sourceTree = "<group>"; };
+		2E3D0A6F1830F74300A119B4 /* RIDPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlace.h; sourceTree = "<group>"; };
+		2E3D0A701830F74300A119B4 /* RIDPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlace.m; sourceTree = "<group>"; };
+		2E3D0A731830F83000A119B4 /* RIDPlaceCompletionRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlaceCompletionRequestHelper.h; sourceTree = "<group>"; };
+		2E3D0A741830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceCompletionRequestHelper.m; sourceTree = "<group>"; };
+		2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceCompletionRequestHelperTests.m; sourceTree = "<group>"; };
+		2E3D0A781830FEF300A119B4 /* RIDCompletionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDCompletionHelper.h; sourceTree = "<group>"; };
+		2E3D0A791830FEF300A119B4 /* RIDCompletionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDCompletionHelper.m; sourceTree = "<group>"; };
+		2E3D0A7B1831362E00A119B4 /* RIDPlaceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceTest.m; sourceTree = "<group>"; };
+		2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDCompletionHelperTest.m; sourceTree = "<group>"; };
+		2E3D0A7F1831387800A119B4 /* placeCompletionResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = placeCompletionResponse.json; sourceTree = "<group>"; };
+		2E3D0A8218313F4E00A119B4 /* RIDPlaceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlaceListViewController.h; sourceTree = "<group>"; };
+		2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceListViewController.m; sourceTree = "<group>"; };
+		2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RIDPlaceListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +127,9 @@
 		2E3D0A451830F6CA00A119B4 /* RainIsDead */ = {
 			isa = PBXGroup;
 			children = (
+				2E3D0A8118313EEB00A119B4 /* UI */,
+				2E3D0A721830F7D600A119B4 /* Network */,
+				2E3D0A6E1830F6DD00A119B4 /* Business */,
 				2E3D0A4E1830F6CA00A119B4 /* RIDAppDelegate.h */,
 				2E3D0A4F1830F6CA00A119B4 /* RIDAppDelegate.m */,
 				2E3D0A511830F6CA00A119B4 /* Images.xcassets */,
@@ -129,8 +152,11 @@
 		2E3D0A5E1830F6CA00A119B4 /* RainIsDeadTests */ = {
 			isa = PBXGroup;
 			children = (
-				2E3D0A641830F6CA00A119B4 /* RainIsDeadTests.m */,
+				2E3D0A7F1831387800A119B4 /* placeCompletionResponse.json */,
 				2E3D0A5F1830F6CA00A119B4 /* Supporting Files */,
+				2E3D0A7B1831362E00A119B4 /* RIDPlaceTest.m */,
+				2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */,
+				2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */,
 			);
 			path = RainIsDeadTests;
 			sourceTree = "<group>";
@@ -142,6 +168,39 @@
 				2E3D0A611830F6CA00A119B4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E3D0A6E1830F6DD00A119B4 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				2E3D0A6F1830F74300A119B4 /* RIDPlace.h */,
+				2E3D0A701830F74300A119B4 /* RIDPlace.m */,
+			);
+			name = Business;
+			path = src/Business;
+			sourceTree = "<group>";
+		};
+		2E3D0A721830F7D600A119B4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2E3D0A731830F83000A119B4 /* RIDPlaceCompletionRequestHelper.h */,
+				2E3D0A741830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m */,
+				2E3D0A781830FEF300A119B4 /* RIDCompletionHelper.h */,
+				2E3D0A791830FEF300A119B4 /* RIDCompletionHelper.m */,
+			);
+			name = Network;
+			path = src/Network;
+			sourceTree = "<group>";
+		};
+		2E3D0A8118313EEB00A119B4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2E3D0A8218313F4E00A119B4 /* RIDPlaceListViewController.h */,
+				2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */,
+				2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */,
+			);
+			name = UI;
+			path = src/UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3D0A4A1830F6CA00A119B4 /* InfoPlist.strings in Resources */,
+				2E3D0A8618313F4E00A119B4 /* RIDPlaceListViewController.xib in Resources */,
 				2E3D0A521830F6CA00A119B4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3D0A801831387800A119B4 /* placeCompletionResponse.json in Resources */,
 				2E3D0A631830F6CA00A119B4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +302,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3D0A501830F6CA00A119B4 /* RIDAppDelegate.m in Sources */,
+				2E3D0A7A1830FEF300A119B4 /* RIDCompletionHelper.m in Sources */,
+				2E3D0A8518313F4E00A119B4 /* RIDPlaceListViewController.m in Sources */,
+				2E3D0A751830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m in Sources */,
 				2E3D0A4C1830F6CA00A119B4 /* main.m in Sources */,
+				2E3D0A711830F74300A119B4 /* RIDPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +314,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E3D0A651830F6CA00A119B4 /* RainIsDeadTests.m in Sources */,
+				2E3D0A7E1831377200A119B4 /* RIDCompletionHelperTest.m in Sources */,
+				2E3D0A771830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m in Sources */,
+				2E3D0A7C1831362E00A119B4 /* RIDPlaceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +464,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = "RainIsDeadTests/RainIsDeadTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -416,6 +484,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RainIsDead/RainIsDead-Prefix.pch";
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = "RainIsDeadTests/RainIsDeadTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

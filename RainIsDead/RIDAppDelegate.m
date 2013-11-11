@@ -7,6 +7,9 @@
 //
 
 #import "RIDAppDelegate.h"
+#import "RIDCompletionHelper.h"
+#import "RIDPlace.h"
+#import "RIDPlaceListViewController.h"
 
 @implementation RIDAppDelegate
 
@@ -16,6 +19,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    RIDPlaceListViewController *placeListViewController = [[RIDPlaceListViewController alloc] initWithNibName:@"RIDPlaceListViewController" bundle:nil];
+    self.window.rootViewController = placeListViewController;
+
+
     return YES;
 }
 
