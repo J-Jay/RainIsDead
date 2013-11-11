@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RIDRainView.h"
 
 @interface RIDPlaceListViewController : UIViewController
+
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UILabel *placeName;
+@property (nonatomic, strong) IBOutlet RIDRainView *rainView;
+
 @end

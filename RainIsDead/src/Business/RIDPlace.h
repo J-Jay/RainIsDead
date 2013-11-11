@@ -14,6 +14,6 @@
 @property (nonatomic, strong) NSString *nom;
 @property (nonatomic, strong) NSString *codePostal;
 @property (nonatomic, assign) BOOL couvertPluie;
-
+@property (nonatomic, strong) NSArray *rainPeriods;
 
 @end

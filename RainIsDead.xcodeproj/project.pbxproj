@@ -27,6 +27,11 @@
 		2E3D0A801831387800A119B4 /* placeCompletionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7F1831387800A119B4 /* placeCompletionResponse.json */; };
 		2E3D0A8518313F4E00A119B4 /* RIDPlaceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */; };
 		2E3D0A8618313F4E00A119B4 /* RIDPlaceListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */; };
+		2E3D0A89183148B800A119B4 /* RIDPlaceRainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A88183148B800A119B4 /* RIDPlaceRainHelper.m */; };
+		2E3D0A8C1831494A00A119B4 /* RIDPlaceRainRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8B1831494A00A119B4 /* RIDPlaceRainRequestHelper.m */; };
+		2E3D0A8E1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8D1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m */; };
+		2E3D0A9118317DA900A119B4 /* RIDRainPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A9018317DA900A119B4 /* RIDRainPeriod.m */; };
+		2E3D0A9418317FAE00A119B4 /* RIDRainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A9318317FAE00A119B4 /* RIDRainView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,15 @@
 		2E3D0A8218313F4E00A119B4 /* RIDPlaceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlaceListViewController.h; sourceTree = "<group>"; };
 		2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceListViewController.m; sourceTree = "<group>"; };
 		2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RIDPlaceListViewController.xib; sourceTree = "<group>"; };
+		2E3D0A87183148B800A119B4 /* RIDPlaceRainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlaceRainHelper.h; sourceTree = "<group>"; };
+		2E3D0A88183148B800A119B4 /* RIDPlaceRainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceRainHelper.m; sourceTree = "<group>"; };
+		2E3D0A8A1831494A00A119B4 /* RIDPlaceRainRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlaceRainRequestHelper.h; sourceTree = "<group>"; };
+		2E3D0A8B1831494A00A119B4 /* RIDPlaceRainRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceRainRequestHelper.m; sourceTree = "<group>"; };
+		2E3D0A8D1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceRainRequestHelperTest.m; sourceTree = "<group>"; };
+		2E3D0A8F18317DA900A119B4 /* RIDRainPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDRainPeriod.h; sourceTree = "<group>"; };
+		2E3D0A9018317DA900A119B4 /* RIDRainPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDRainPeriod.m; sourceTree = "<group>"; };
+		2E3D0A9218317FAE00A119B4 /* RIDRainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDRainView.h; sourceTree = "<group>"; };
+		2E3D0A9318317FAE00A119B4 /* RIDRainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDRainView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +171,7 @@
 				2E3D0A7B1831362E00A119B4 /* RIDPlaceTest.m */,
 				2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */,
 				2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */,
+				2E3D0A8D1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m */,
 			);
 			path = RainIsDeadTests;
 			sourceTree = "<group>";
@@ -175,6 +190,8 @@
 			children = (
 				2E3D0A6F1830F74300A119B4 /* RIDPlace.h */,
 				2E3D0A701830F74300A119B4 /* RIDPlace.m */,
+				2E3D0A8F18317DA900A119B4 /* RIDRainPeriod.h */,
+				2E3D0A9018317DA900A119B4 /* RIDRainPeriod.m */,
 			);
 			name = Business;
 			path = src/Business;
@@ -187,6 +204,10 @@
 				2E3D0A741830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m */,
 				2E3D0A781830FEF300A119B4 /* RIDCompletionHelper.h */,
 				2E3D0A791830FEF300A119B4 /* RIDCompletionHelper.m */,
+				2E3D0A8A1831494A00A119B4 /* RIDPlaceRainRequestHelper.h */,
+				2E3D0A8B1831494A00A119B4 /* RIDPlaceRainRequestHelper.m */,
+				2E3D0A87183148B800A119B4 /* RIDPlaceRainHelper.h */,
+				2E3D0A88183148B800A119B4 /* RIDPlaceRainHelper.m */,
 			);
 			name = Network;
 			path = src/Network;
@@ -198,6 +219,8 @@
 				2E3D0A8218313F4E00A119B4 /* RIDPlaceListViewController.h */,
 				2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */,
 				2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */,
+				2E3D0A9218317FAE00A119B4 /* RIDRainView.h */,
+				2E3D0A9318317FAE00A119B4 /* RIDRainView.m */,
 			);
 			name = UI;
 			path = src/UI;
@@ -304,8 +327,12 @@
 				2E3D0A501830F6CA00A119B4 /* RIDAppDelegate.m in Sources */,
 				2E3D0A7A1830FEF300A119B4 /* RIDCompletionHelper.m in Sources */,
 				2E3D0A8518313F4E00A119B4 /* RIDPlaceListViewController.m in Sources */,
+				2E3D0A89183148B800A119B4 /* RIDPlaceRainHelper.m in Sources */,
 				2E3D0A751830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m in Sources */,
+				2E3D0A8C1831494A00A119B4 /* RIDPlaceRainRequestHelper.m in Sources */,
 				2E3D0A4C1830F6CA00A119B4 /* main.m in Sources */,
+				2E3D0A9118317DA900A119B4 /* RIDRainPeriod.m in Sources */,
+				2E3D0A9418317FAE00A119B4 /* RIDRainView.m in Sources */,
 				2E3D0A711830F74300A119B4 /* RIDPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3D0A7E1831377200A119B4 /* RIDCompletionHelperTest.m in Sources */,
+				2E3D0A8E1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m in Sources */,
 				2E3D0A771830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m in Sources */,
 				2E3D0A7C1831362E00A119B4 /* RIDPlaceTest.m in Sources */,
 			);
