@@ -28,7 +28,7 @@
                 <searchBar contentMode="redraw" text="" showsCancelButton="YES" id="L1v-Hr-0tz">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                     <scopeButtonTitles>
                         <string>Title</string>
                         <string>Title</string>
