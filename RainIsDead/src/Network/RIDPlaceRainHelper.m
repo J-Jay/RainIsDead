@@ -20,7 +20,8 @@
 
 
 +(void)updateRainInfoForPlace:(RIDPlace *)aPlace{
-    
+
+    NSLog(@"[%@] Update Rain info", aPlace.nom);
     NSURLRequest *request = [RIDPlaceRainRequestHelper urlRequestWithPlace:aPlace];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -46,6 +47,20 @@
     rainPeriod.startDate = [NSDate dateWithTimeIntervalSince1970:timestamp];
     rainPeriod.type = [[json objectForKey:@"value"] integerValue];
     return  rainPeriod;
+}
+
+@end
+
+@implementation  RIDPlace ( RIDPlaceRainHelper )
+
+#define uptodateLimit (5*60)
+-(void)updateRainInfos{
+    RIDRainPeriod *rainPeriod = [self.rainPeriods firstObject];
+    BOOL hasData = (rainPeriod != nil);
+    NSTimeInterval dataIsUpToDate = ( ABS(rainPeriod.startDate.timeIntervalSinceNow) < uptodateLimit );
+    if (self.couvertPluie && ( !hasData || !dataIsUpToDate) ) {
+        [RIDPlaceRainHelper updateRainInfoForPlace:self];
+    }
 }
 
 @end

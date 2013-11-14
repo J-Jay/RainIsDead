@@ -9,10 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "RIDRainView.h"
 
+@protocol RIDPlaceListViewControllerDelegate;
+
 @interface RIDPlaceListViewController : UIViewController
 
+@property (nonatomic, weak) id<RIDPlaceListViewControllerDelegate> delegate;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) IBOutlet UILabel *placeName;
-@property (nonatomic, strong) IBOutlet RIDRainView *rainView;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
+@end
+
+@protocol RIDPlaceListViewControllerDelegate <NSObject>
+
+-(void)placeListViewController:(RIDPlaceListViewController *)controller didSelectPlace:(RIDPlace *)place;
+-(void)placeListViewControllerDidCancel:(RIDPlaceListViewController *)controller;
 
 @end

@@ -9,19 +9,22 @@
 #import "RIDAppDelegate.h"
 #import "RIDCompletionHelper.h"
 #import "RIDPlace.h"
-#import "RIDPlaceListViewController.h"
+#import "RIDPlacesViewController.h"
+#import "UIColor+Adds.h"
 
 @implementation RIDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.tintColor = [UIColor smallRainColor];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    RIDPlaceListViewController *placeListViewController = [[RIDPlaceListViewController alloc] initWithNibName:@"RIDPlaceListViewController" bundle:nil];
-    self.window.rootViewController = placeListViewController;
+    RIDPlacesViewController *placeListViewController = [[RIDPlacesViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:placeListViewController];
+    self.window.rootViewController = navCtrl;
 
 
     return YES;

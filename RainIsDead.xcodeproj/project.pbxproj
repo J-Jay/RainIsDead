@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E318BF518350F6A00BE935E /* RIDFavoritePlacesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF418350F6A00BE935E /* RIDFavoritePlacesHelper.m */; };
+		2E318BF718351BD100BE935E /* RIDFavoritePlacesHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF618351BD100BE935E /* RIDFavoritePlacesHelperTest.m */; };
+		2E318BFA18354B8300BE935E /* RIDTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF918354B8300BE935E /* RIDTestObserver.m */; };
+		2E318BFE1835527F00BE935E /* RIDPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BFD1835527F00BE935E /* RIDPlacesViewController.m */; };
+		2E318C011835660500BE935E /* RIDPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318C001835660500BE935E /* RIDPlaceCell.m */; };
+		2E318C051835897A00BE935E /* UIColor+Adds.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318C041835897A00BE935E /* UIColor+Adds.m */; };
 		2E3D0A401830F6CA00A119B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */; };
 		2E3D0A421830F6CA00A119B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A411830F6CA00A119B4 /* CoreGraphics.framework */; };
 		2E3D0A441830F6CA00A119B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A431830F6CA00A119B4 /* UIKit.framework */; };
@@ -45,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E318BF318350F6A00BE935E /* RIDFavoritePlacesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDFavoritePlacesHelper.h; sourceTree = "<group>"; };
+		2E318BF418350F6A00BE935E /* RIDFavoritePlacesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDFavoritePlacesHelper.m; sourceTree = "<group>"; };
+		2E318BF618351BD100BE935E /* RIDFavoritePlacesHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDFavoritePlacesHelperTest.m; sourceTree = "<group>"; };
+		2E318BF918354B8300BE935E /* RIDTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDTestObserver.m; sourceTree = "<group>"; };
+		2E318BFC1835527F00BE935E /* RIDPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlacesViewController.h; sourceTree = "<group>"; };
+		2E318BFD1835527F00BE935E /* RIDPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlacesViewController.m; sourceTree = "<group>"; };
+		2E318BFF1835660500BE935E /* RIDPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlaceCell.h; sourceTree = "<group>"; };
+		2E318C001835660500BE935E /* RIDPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlaceCell.m; sourceTree = "<group>"; };
+		2E318C031835897A00BE935E /* UIColor+Adds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Adds.h"; sourceTree = "<group>"; };
+		2E318C041835897A00BE935E /* UIColor+Adds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Adds.m"; sourceTree = "<group>"; };
 		2E3D0A3C1830F6CA00A119B4 /* RainIsDead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainIsDead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2E3D0A411830F6CA00A119B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,6 +124,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E318BF218350F3C00BE935E /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2E318BF318350F6A00BE935E /* RIDFavoritePlacesHelper.h */,
+				2E318BF418350F6A00BE935E /* RIDFavoritePlacesHelper.m */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		2E318C021835895500BE935E /* SDK+Adds */ = {
+			isa = PBXGroup;
+			children = (
+				2E318C031835897A00BE935E /* UIColor+Adds.h */,
+				2E318C041835897A00BE935E /* UIColor+Adds.m */,
+			);
+			path = "SDK+Adds";
+			sourceTree = "<group>";
+		};
 		2E3D0A331830F6CA00A119B4 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +175,8 @@
 		2E3D0A451830F6CA00A119B4 /* RainIsDead */ = {
 			isa = PBXGroup;
 			children = (
+				2E318C021835895500BE935E /* SDK+Adds */,
+				2E318BF218350F3C00BE935E /* Logic */,
 				2E3D0A8118313EEB00A119B4 /* UI */,
 				2E3D0A721830F7D600A119B4 /* Network */,
 				2E3D0A6E1830F6DD00A119B4 /* Business */,
@@ -169,9 +205,11 @@
 				2E3D0A7F1831387800A119B4 /* placeCompletionResponse.json */,
 				2E3D0A5F1830F6CA00A119B4 /* Supporting Files */,
 				2E3D0A7B1831362E00A119B4 /* RIDPlaceTest.m */,
+				2E318BF618351BD100BE935E /* RIDFavoritePlacesHelperTest.m */,
 				2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */,
 				2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */,
 				2E3D0A8D1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m */,
+				2E318BF918354B8300BE935E /* RIDTestObserver.m */,
 			);
 			path = RainIsDeadTests;
 			sourceTree = "<group>";
@@ -216,11 +254,15 @@
 		2E3D0A8118313EEB00A119B4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2E318BFC1835527F00BE935E /* RIDPlacesViewController.h */,
+				2E318BFD1835527F00BE935E /* RIDPlacesViewController.m */,
 				2E3D0A8218313F4E00A119B4 /* RIDPlaceListViewController.h */,
 				2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */,
 				2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */,
 				2E3D0A9218317FAE00A119B4 /* RIDRainView.h */,
 				2E3D0A9318317FAE00A119B4 /* RIDRainView.m */,
+				2E318BFF1835660500BE935E /* RIDPlaceCell.h */,
+				2E318C001835660500BE935E /* RIDPlaceCell.m */,
 			);
 			name = UI;
 			path = src/UI;
@@ -327,12 +369,16 @@
 				2E3D0A501830F6CA00A119B4 /* RIDAppDelegate.m in Sources */,
 				2E3D0A7A1830FEF300A119B4 /* RIDCompletionHelper.m in Sources */,
 				2E3D0A8518313F4E00A119B4 /* RIDPlaceListViewController.m in Sources */,
+				2E318BF518350F6A00BE935E /* RIDFavoritePlacesHelper.m in Sources */,
 				2E3D0A89183148B800A119B4 /* RIDPlaceRainHelper.m in Sources */,
 				2E3D0A751830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m in Sources */,
 				2E3D0A8C1831494A00A119B4 /* RIDPlaceRainRequestHelper.m in Sources */,
+				2E318C011835660500BE935E /* RIDPlaceCell.m in Sources */,
 				2E3D0A4C1830F6CA00A119B4 /* main.m in Sources */,
+				2E318C051835897A00BE935E /* UIColor+Adds.m in Sources */,
 				2E3D0A9118317DA900A119B4 /* RIDRainPeriod.m in Sources */,
 				2E3D0A9418317FAE00A119B4 /* RIDRainView.m in Sources */,
+				2E318BFE1835527F00BE935E /* RIDPlacesViewController.m in Sources */,
 				2E3D0A711830F74300A119B4 /* RIDPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +391,8 @@
 				2E3D0A8E1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m in Sources */,
 				2E3D0A771830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m in Sources */,
 				2E3D0A7C1831362E00A119B4 /* RIDPlaceTest.m in Sources */,
+				2E318BF718351BD100BE935E /* RIDFavoritePlacesHelperTest.m in Sources */,
+				2E318BFA18354B8300BE935E /* RIDTestObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +506,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RainIsDead/RainIsDead-Prefix.pch";
 				INFOPLIST_FILE = "RainIsDead/RainIsDead-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -471,6 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RainIsDead/RainIsDead-Prefix.pch";
 				INFOPLIST_FILE = "RainIsDead/RainIsDead-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -494,6 +544,11 @@
 				);
 				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = "RainIsDeadTests/RainIsDeadTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -514,6 +569,11 @@
 				GCC_PREFIX_HEADER = "RainIsDead/RainIsDead-Prefix.pch";
 				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = "RainIsDeadTests/RainIsDeadTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -539,6 +599,7 @@
 				2E3D0A6A1830F6CA00A119B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E3D0A6B1830F6CA00A119B4 /* Build configuration list for PBXNativeTarget "RainIsDeadTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +608,7 @@
 				2E3D0A6D1830F6CA00A119B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

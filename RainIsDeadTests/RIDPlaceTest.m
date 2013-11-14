@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "RIDPlace.h"
 
 @interface RIDPlaceTest : XCTestCase
 
@@ -26,9 +27,41 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void) testArchiver {
+    RIDPlace *place = [[RIDPlace alloc] init];
+    place.nom = @"place name";
+    place.indicatif = @"12345";
+    place.codePostal = @"67890";
+    place.couvertPluie = YES;
+
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:place];
+    RIDPlace *archivedPlace = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    XCTAssertNotNil(archivedPlace, @"unarchived place should not be nil");
+    XCTAssertEqualObjects(archivedPlace.nom, @"place name", @"unarchived place name should be [place name]");
+    XCTAssertEqualObjects(archivedPlace.indicatif, @"12345", @"unarchived place indicatif should be [12345]");
+    XCTAssertEqualObjects(archivedPlace.codePostal, @"67890", @"unarchived place codePostal should be [67890]");
+    XCTAssertEqual(archivedPlace.couvertPluie, YES, @"unarchived place couvertPluie should be YES");
+}
+
+-(void)testEquals{
+    RIDPlace *place1 = [[RIDPlace alloc] init];
+    place1.indicatif = @"1234";
+    
+    RIDPlace *place2 = [[RIDPlace alloc] init];
+    place2.indicatif = @"1234";
+    
+    XCTAssertEqualObjects(place1, place2, @"place1 should equals place2");
+}
+
+-(void)testNotEquals{
+    RIDPlace *place1 = [[RIDPlace alloc] init];
+    place1.indicatif = @"1234";
+    
+    RIDPlace *place2 = [[RIDPlace alloc] init];
+    place2.indicatif = @"1243";
+    
+    XCTAssertNotEqualObjects(place1, place2, @"place1 should not equals place2");
 }
 
 @end

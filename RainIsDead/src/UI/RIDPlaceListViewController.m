@@ -18,6 +18,11 @@
 @implementation RIDPlaceListViewController
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.searchBar becomeFirstResponder];
+}
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
@@ -25,13 +30,14 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     RIDCompletionHelper *completionHelper = [[RIDCompletionHelper alloc] init];
     [completionHelper placesWithInput:searchBar.text completionHandler:^(NSArray *places, NSError *connectionError) {
-//        NSLog(@"places : %@", places);
         self.places = places;
-        self.tableView.hidden = ([places count] == 0);
         [self.tableView reloadData];
     }];
 }
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    [self.delegate placeListViewControllerDidCancel:self];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.places count];
@@ -52,10 +58,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     RIDPlace *place = [self.places objectAtIndex:indexPath.row];
-    self.rainView.place = place;
-    self.placeName.text = place.nom;
-    [RIDPlaceRainHelper updateRainInfoForPlace:place];
-    self.tableView.hidden = YES;
+    [self.delegate placeListViewController:self didSelectPlace:place];
 }
 
 @end

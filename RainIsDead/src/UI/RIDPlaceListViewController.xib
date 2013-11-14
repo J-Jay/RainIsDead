@@ -6,8 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RIDPlaceListViewController">
             <connections>
-                <outlet property="placeName" destination="Gh2-1m-gkU" id="Z02-r2-cL3"/>
-                <outlet property="rainView" destination="Qvq-0D-zJ8" id="02f-Xa-DAS"/>
+                <outlet property="searchBar" destination="L1v-Hr-0tz" id="EWo-6o-9th"/>
                 <outlet property="tableView" destination="ANI-1E-s6w" id="kbe-3Q-g0L"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -17,25 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="cAH-1k-vWN">
-                    <rect key="frame" x="0.0" y="37" width="320" height="524"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gh2-1m-gkU">
-                            <rect key="frame" x="10" y="39" width="301" height="46"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" id="Qvq-0D-zJ8" customClass="RIDRainView">
-                            <rect key="frame" x="10" y="116" width="301" height="69"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ANI-1E-s6w">
                     <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,10 +25,14 @@
                         <outlet property="delegate" destination="-1" id="ypO-F0-1as"/>
                     </connections>
                 </tableView>
-                <searchBar contentMode="redraw" text="montoire" id="L1v-Hr-0tz">
+                <searchBar contentMode="redraw" text="" showsCancelButton="YES" id="L1v-Hr-0tz">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
                     <connections>
                         <outlet property="delegate" destination="-1" id="Wfu-HH-dkJ"/>
                     </connections>
