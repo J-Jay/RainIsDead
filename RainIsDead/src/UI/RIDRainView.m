@@ -59,6 +59,21 @@ static NSString *kvoContext = @"RIDRainViewKvoContext";
         NSTimeInterval curentPeriodLength = curentPeriodEndTime - curentPeriodStartTime;
         periodFrame.size.width = (viewWidth * curentPeriodLength / periodLength) - 1;
         
+        RIDRainPeriod *period = [self.place.rainPeriods objectAtIndex:i];
+
+        if (period.type == 0) {
+            periodFrame.size.height = 0.0f;
+        } else if (period.type == 1) {
+            periodFrame.size.height = CGRectGetHeight(self.bounds) / 4.0f;
+        } else if (period.type == 2) {
+            periodFrame.size.height = 2.0f * CGRectGetHeight(self.bounds) / 4.0f;
+        } else if (period.type == 3) {
+            periodFrame.size.height = 3.0f * CGRectGetHeight(self.bounds) / 4.0f;
+        } else  {
+            periodFrame.size.height = CGRectGetHeight(self.bounds);
+        }
+
+        
         UIView *currenView = [self.subviews objectAtIndex:i];
         currenView.frame = periodFrame;
         periodFrame.origin.x = CGRectGetMaxX(periodFrame) + 1;
@@ -80,15 +95,15 @@ static NSString *kvoContext = @"RIDRainViewKvoContext";
         [self addSubview:view];
 
         if (period.type == 0) {
-            view.backgroundColor = [UIColor whiteColor];
+            view.backgroundColor = [UIColor clearColor];
         } else if (period.type == 1) {
-            view.backgroundColor = [UIColor lightGrayColor];
+            view.backgroundColor = [UIColor colorWithRed:216.0f/255.0f green:225.0f/255.0f blue:244.0f/255.0f alpha:1.0f];
         } else if (period.type == 2) {
-            view.backgroundColor = [UIColor grayColor];
+            view.backgroundColor = [UIColor colorWithRed:182.0f/255.0f green:198.0f/255.0f blue:227 alpha:1.0f];
         } else if (period.type == 3) {
-            view.backgroundColor = [UIColor darkGrayColor];
+            view.backgroundColor = [UIColor colorWithRed:151.0f/255.0f green:165.0f/255.0f blue:219.0f/255.0f alpha:1.0f];
         } else  {
-            view.backgroundColor = [UIColor blackColor];
+            view.backgroundColor = [UIColor colorWithRed:45.0f/255.0f green:120.0f/255.0f blue:154.0f/255.0f alpha:1.0f];
         }
         
     }
