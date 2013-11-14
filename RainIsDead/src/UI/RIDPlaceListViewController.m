@@ -47,18 +47,29 @@
     static NSString *placeCellId = @"PlaceCellId";
     UITableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:placeCellId];
     if (tableViewCell == nil) {
-        tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:placeCellId];
+        tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:placeCellId];
     }
     
     RIDPlace *place = [self.places objectAtIndex:indexPath.row];
     tableViewCell.textLabel.text = place.nom;
+    tableViewCell.detailTextLabel.text = place.codePostal;
+    
+    if (place.couvertPluie) {
+        tableViewCell.textLabel.textColor = [UIColor blackColor];
+        tableViewCell.detailTextLabel.textColor = [UIColor blackColor];
+    } else {
+        tableViewCell.textLabel.textColor = [UIColor lightGrayColor];
+        tableViewCell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    }
     
     return tableViewCell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     RIDPlace *place = [self.places objectAtIndex:indexPath.row];
-    [self.delegate placeListViewController:self didSelectPlace:place];
+    if (place.couvertPluie) {
+        [self.delegate placeListViewController:self didSelectPlace:place];
+    }
 }
 
 @end
