@@ -8,7 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, RIDRainPeriodType) {
+    RIDRainPeriodTypeNoData = 0,
+    RIDRainPeriodTypeNoRain,
+    RIDRainPeriodTypeSmallRain,
+    RIDRainPeriodTypeRain,
+    RIDRainPeriodTypeBigRain,
+};
+
 @interface RIDRainPeriod : NSObject
 @property (nonatomic, strong) NSDate *startDate;
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) RIDRainPeriodType type;
 @end

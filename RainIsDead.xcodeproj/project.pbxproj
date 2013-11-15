@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E318BF518350F6A00BE935E /* RIDFavoritePlacesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF418350F6A00BE935E /* RIDFavoritePlacesHelper.m */; };
-		2E318BF718351BD100BE935E /* RIDFavoritePlacesHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF618351BD100BE935E /* RIDFavoritePlacesHelperTest.m */; };
-		2E318BFA18354B8300BE935E /* RIDTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF918354B8300BE935E /* RIDTestObserver.m */; };
 		2E318BFE1835527F00BE935E /* RIDPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BFD1835527F00BE935E /* RIDPlacesViewController.m */; };
 		2E318C011835660500BE935E /* RIDPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318C001835660500BE935E /* RIDPlaceCell.m */; };
-		2E318C051835897A00BE935E /* UIColor+Adds.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318C041835897A00BE935E /* UIColor+Adds.m */; };
 		2E3D0A401830F6CA00A119B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */; };
 		2E3D0A421830F6CA00A119B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A411830F6CA00A119B4 /* CoreGraphics.framework */; };
 		2E3D0A441830F6CA00A119B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A431830F6CA00A119B4 /* UIKit.framework */; };
@@ -20,41 +16,61 @@
 		2E3D0A4C1830F6CA00A119B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A4B1830F6CA00A119B4 /* main.m */; };
 		2E3D0A501830F6CA00A119B4 /* RIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A4F1830F6CA00A119B4 /* RIDAppDelegate.m */; };
 		2E3D0A521830F6CA00A119B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A511830F6CA00A119B4 /* Images.xcassets */; };
-		2E3D0A591830F6CA00A119B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A581830F6CA00A119B4 /* XCTest.framework */; };
-		2E3D0A5A1830F6CA00A119B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */; };
-		2E3D0A5B1830F6CA00A119B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A431830F6CA00A119B4 /* UIKit.framework */; };
-		2E3D0A631830F6CA00A119B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A611830F6CA00A119B4 /* InfoPlist.strings */; };
-		2E3D0A711830F74300A119B4 /* RIDPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A701830F74300A119B4 /* RIDPlace.m */; };
-		2E3D0A751830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A741830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m */; };
-		2E3D0A771830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */; };
-		2E3D0A7A1830FEF300A119B4 /* RIDCompletionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A791830FEF300A119B4 /* RIDCompletionHelper.m */; };
-		2E3D0A7C1831362E00A119B4 /* RIDPlaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7B1831362E00A119B4 /* RIDPlaceTest.m */; };
-		2E3D0A7E1831377200A119B4 /* RIDCompletionHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */; };
-		2E3D0A801831387800A119B4 /* placeCompletionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7F1831387800A119B4 /* placeCompletionResponse.json */; };
 		2E3D0A8518313F4E00A119B4 /* RIDPlaceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8318313F4E00A119B4 /* RIDPlaceListViewController.m */; };
 		2E3D0A8618313F4E00A119B4 /* RIDPlaceListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8418313F4E00A119B4 /* RIDPlaceListViewController.xib */; };
-		2E3D0A89183148B800A119B4 /* RIDPlaceRainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A88183148B800A119B4 /* RIDPlaceRainHelper.m */; };
-		2E3D0A8C1831494A00A119B4 /* RIDPlaceRainRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8B1831494A00A119B4 /* RIDPlaceRainRequestHelper.m */; };
-		2E3D0A8E1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8D1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m */; };
-		2E3D0A9118317DA900A119B4 /* RIDRainPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A9018317DA900A119B4 /* RIDRainPeriod.m */; };
-		2E3D0A9418317FAE00A119B4 /* RIDRainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A9318317FAE00A119B4 /* RIDRainView.m */; };
+		2ED4118618390E1800B14494 /* RIDCompletionPlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED4118518390E1800B14494 /* RIDCompletionPlaceTableViewCell.m */; };
+		2ED4118D1839796900B14494 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED4118C1839796900B14494 /* CoreLocation.framework */; };
+		2ED411B918397C2F00B14494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */; };
+		2ED411C618397C2F00B14494 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A581830F6CA00A119B4 /* XCTest.framework */; };
+		2ED411C718397C2F00B14494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */; };
+		2ED411C818397C2F00B14494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D0A431830F6CA00A119B4 /* UIKit.framework */; };
+		2ED411CB18397C2F00B14494 /* libRainIsDeadLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED411B818397C2F00B14494 /* libRainIsDeadLib.a */; };
+		2ED411DA18397CEC00B14494 /* RIDPlaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7B1831362E00A119B4 /* RIDPlaceTest.m */; };
+		2ED411DB18397CEC00B14494 /* RIDFavoritePlacesHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF618351BD100BE935E /* RIDFavoritePlacesHelperTest.m */; };
+		2ED411DC18397CEC00B14494 /* RIDPlaceCompletionRequestHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */; };
+		2ED411DD18397CEC00B14494 /* RIDCompletionHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */; };
+		2ED411DE18397CEC00B14494 /* RIDPlaceRainRequestHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8D1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m */; };
+		2ED411DF18397CEC00B14494 /* RIDGeolocalisationRequestHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED4118A1839791F00B14494 /* RIDGeolocalisationRequestHelperTest.m */; };
+		2ED411E018397CFD00B14494 /* RIDPlaceCompletionRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A741830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m */; };
+		2ED411E118397CFD00B14494 /* RIDCompletionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A791830FEF300A119B4 /* RIDCompletionHelper.m */; };
+		2ED411E218397CFD00B14494 /* RIDPlaceRainRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A8B1831494A00A119B4 /* RIDPlaceRainRequestHelper.m */; };
+		2ED411E318397CFD00B14494 /* RIDPlaceRainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A88183148B800A119B4 /* RIDPlaceRainHelper.m */; };
+		2ED411E418397CFD00B14494 /* RIDGeolocalisationRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED411881839790A00B14494 /* RIDGeolocalisationRequestHelper.m */; };
+		2ED411E518397D0A00B14494 /* RIDPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A701830F74300A119B4 /* RIDPlace.m */; };
+		2ED411E618397D0A00B14494 /* RIDRainPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A9018317DA900A119B4 /* RIDRainPeriod.m */; };
+		2ED411E718397D1200B14494 /* RIDFavoritePlacesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318BF418350F6A00BE935E /* RIDFavoritePlacesHelper.m */; };
+		2ED411E818397D4E00B14494 /* UIColor+Adds.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E318C041835897A00BE935E /* UIColor+Adds.m */; };
+		2ED411E918397D5400B14494 /* RIDRainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D0A9318317FAE00A119B4 /* RIDRainView.m */; };
+		2ED411EA18397D9200B14494 /* libRainIsDeadLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED411B818397C2F00B14494 /* libRainIsDeadLib.a */; };
+		2ED411ED1839802B00B14494 /* RIDGeolocalisationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED411EC1839802B00B14494 /* RIDGeolocalisationHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2E3D0A5C1830F6CA00A119B4 /* PBXContainerItemProxy */ = {
+		2ED411C918397C2F00B14494 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2E3D0A341830F6CA00A119B4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2E3D0A3B1830F6CA00A119B4;
-			remoteInfo = RainIsDead;
+			remoteGlobalIDString = 2ED411B718397C2F00B14494;
+			remoteInfo = RainIsDeadLib;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2ED411B618397C2F00B14494 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2E318BF318350F6A00BE935E /* RIDFavoritePlacesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDFavoritePlacesHelper.h; sourceTree = "<group>"; };
 		2E318BF418350F6A00BE935E /* RIDFavoritePlacesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDFavoritePlacesHelper.m; sourceTree = "<group>"; };
 		2E318BF618351BD100BE935E /* RIDFavoritePlacesHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDFavoritePlacesHelperTest.m; sourceTree = "<group>"; };
-		2E318BF918354B8300BE935E /* RIDTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDTestObserver.m; sourceTree = "<group>"; };
 		2E318BFC1835527F00BE935E /* RIDPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlacesViewController.h; sourceTree = "<group>"; };
 		2E318BFD1835527F00BE935E /* RIDPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDPlacesViewController.m; sourceTree = "<group>"; };
 		2E318BFF1835660500BE935E /* RIDPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDPlaceCell.h; sourceTree = "<group>"; };
@@ -72,7 +88,6 @@
 		2E3D0A4E1830F6CA00A119B4 /* RIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIDAppDelegate.h; sourceTree = "<group>"; };
 		2E3D0A4F1830F6CA00A119B4 /* RIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIDAppDelegate.m; sourceTree = "<group>"; };
 		2E3D0A511830F6CA00A119B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2E3D0A571830F6CA00A119B4 /* RainIsDeadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainIsDeadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3D0A581830F6CA00A119B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2E3D0A601830F6CA00A119B4 /* RainIsDeadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RainIsDeadTests-Info.plist"; sourceTree = "<group>"; };
 		2E3D0A621830F6CA00A119B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -98,6 +113,20 @@
 		2E3D0A9018317DA900A119B4 /* RIDRainPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDRainPeriod.m; sourceTree = "<group>"; };
 		2E3D0A9218317FAE00A119B4 /* RIDRainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDRainView.h; sourceTree = "<group>"; };
 		2E3D0A9318317FAE00A119B4 /* RIDRainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDRainView.m; sourceTree = "<group>"; };
+		2E4B4D7E1836E74900BCE5D9 /* RainIsDeadLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RainIsDeadLibTests-Info.plist"; sourceTree = "<group>"; };
+		2E4B4D801836E74900BCE5D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E4B4D821836E74900BCE5D9 /* RainIsDeadLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RainIsDeadLibTests.m; sourceTree = "<group>"; };
+		2ED4118418390E1800B14494 /* RIDCompletionPlaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDCompletionPlaceTableViewCell.h; sourceTree = "<group>"; };
+		2ED4118518390E1800B14494 /* RIDCompletionPlaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDCompletionPlaceTableViewCell.m; sourceTree = "<group>"; };
+		2ED411871839790A00B14494 /* RIDGeolocalisationRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDGeolocalisationRequestHelper.h; sourceTree = "<group>"; };
+		2ED411881839790A00B14494 /* RIDGeolocalisationRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDGeolocalisationRequestHelper.m; sourceTree = "<group>"; };
+		2ED4118A1839791F00B14494 /* RIDGeolocalisationRequestHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDGeolocalisationRequestHelperTest.m; sourceTree = "<group>"; };
+		2ED4118C1839796900B14494 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2ED4119618397C0300B14494 /* RainIsDeadLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RainIsDeadLib-Prefix.pch"; path = "RainIsDeadLib/RainIsDeadLib-Prefix.pch"; sourceTree = "<group>"; };
+		2ED411B818397C2F00B14494 /* libRainIsDeadLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRainIsDeadLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ED411C518397C2F00B14494 /* RainIsDeadLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainIsDeadLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ED411EB1839802B00B14494 /* RIDGeolocalisationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIDGeolocalisationHelper.h; sourceTree = "<group>"; };
+		2ED411EC1839802B00B14494 /* RIDGeolocalisationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIDGeolocalisationHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,19 +134,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED411EA18397D9200B14494 /* libRainIsDeadLib.a in Frameworks */,
+				2ED4118D1839796900B14494 /* CoreLocation.framework in Frameworks */,
 				2E3D0A421830F6CA00A119B4 /* CoreGraphics.framework in Frameworks */,
 				2E3D0A441830F6CA00A119B4 /* UIKit.framework in Frameworks */,
 				2E3D0A401830F6CA00A119B4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E3D0A541830F6CA00A119B4 /* Frameworks */ = {
+		2ED411B518397C2F00B14494 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E3D0A591830F6CA00A119B4 /* XCTest.framework in Frameworks */,
-				2E3D0A5B1830F6CA00A119B4 /* UIKit.framework in Frameworks */,
-				2E3D0A5A1830F6CA00A119B4 /* Foundation.framework in Frameworks */,
+				2ED411B918397C2F00B14494 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ED411C218397C2F00B14494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ED411C618397C2F00B14494 /* XCTest.framework in Frameworks */,
+				2ED411C818397C2F00B14494 /* UIKit.framework in Frameworks */,
+				2ED411C718397C2F00B14494 /* Foundation.framework in Frameworks */,
+				2ED411CB18397C2F00B14494 /* libRainIsDeadLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +169,8 @@
 			children = (
 				2E318BF318350F6A00BE935E /* RIDFavoritePlacesHelper.h */,
 				2E318BF418350F6A00BE935E /* RIDFavoritePlacesHelper.m */,
+				2ED411EB1839802B00B14494 /* RIDGeolocalisationHelper.h */,
+				2ED411EC1839802B00B14494 /* RIDGeolocalisationHelper.m */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -147,6 +189,8 @@
 			children = (
 				2E3D0A451830F6CA00A119B4 /* RainIsDead */,
 				2E3D0A5E1830F6CA00A119B4 /* RainIsDeadTests */,
+				2ED4119418397C0300B14494 /* RainIsDeadLib */,
+				2E4B4D7C1836E74900BCE5D9 /* RainIsDeadLibTests */,
 				2E3D0A3E1830F6CA00A119B4 /* Frameworks */,
 				2E3D0A3D1830F6CA00A119B4 /* Products */,
 			);
@@ -156,7 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				2E3D0A3C1830F6CA00A119B4 /* RainIsDead.app */,
-				2E3D0A571830F6CA00A119B4 /* RainIsDeadTests.xctest */,
+				2ED411B818397C2F00B14494 /* libRainIsDeadLib.a */,
+				2ED411C518397C2F00B14494 /* RainIsDeadLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +209,7 @@
 		2E3D0A3E1830F6CA00A119B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2ED4118C1839796900B14494 /* CoreLocation.framework */,
 				2E3D0A3F1830F6CA00A119B4 /* Foundation.framework */,
 				2E3D0A411830F6CA00A119B4 /* CoreGraphics.framework */,
 				2E3D0A431830F6CA00A119B4 /* UIKit.framework */,
@@ -209,7 +255,7 @@
 				2E3D0A761830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m */,
 				2E3D0A7D1831377200A119B4 /* RIDCompletionHelperTest.m */,
 				2E3D0A8D1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m */,
-				2E318BF918354B8300BE935E /* RIDTestObserver.m */,
+				2ED4118A1839791F00B14494 /* RIDGeolocalisationRequestHelperTest.m */,
 			);
 			path = RainIsDeadTests;
 			sourceTree = "<group>";
@@ -246,6 +292,8 @@
 				2E3D0A8B1831494A00A119B4 /* RIDPlaceRainRequestHelper.m */,
 				2E3D0A87183148B800A119B4 /* RIDPlaceRainHelper.h */,
 				2E3D0A88183148B800A119B4 /* RIDPlaceRainHelper.m */,
+				2ED411871839790A00B14494 /* RIDGeolocalisationRequestHelper.h */,
+				2ED411881839790A00B14494 /* RIDGeolocalisationRequestHelper.m */,
 			);
 			name = Network;
 			path = src/Network;
@@ -263,9 +311,45 @@
 				2E3D0A9318317FAE00A119B4 /* RIDRainView.m */,
 				2E318BFF1835660500BE935E /* RIDPlaceCell.h */,
 				2E318C001835660500BE935E /* RIDPlaceCell.m */,
+				2ED4118418390E1800B14494 /* RIDCompletionPlaceTableViewCell.h */,
+				2ED4118518390E1800B14494 /* RIDCompletionPlaceTableViewCell.m */,
 			);
 			name = UI;
 			path = src/UI;
+			sourceTree = "<group>";
+		};
+		2E4B4D7C1836E74900BCE5D9 /* RainIsDeadLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E4B4D821836E74900BCE5D9 /* RainIsDeadLibTests.m */,
+				2E4B4D7D1836E74900BCE5D9 /* Supporting Files */,
+			);
+			path = RainIsDeadLibTests;
+			sourceTree = "<group>";
+		};
+		2E4B4D7D1836E74900BCE5D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E4B4D7E1836E74900BCE5D9 /* RainIsDeadLibTests-Info.plist */,
+				2E4B4D7F1836E74900BCE5D9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2ED4119418397C0300B14494 /* RainIsDeadLib */ = {
+			isa = PBXGroup;
+			children = (
+				2ED4119518397C0300B14494 /* Supporting Files */,
+			);
+			path = RainIsDeadLib;
+			sourceTree = "<group>";
+		};
+		2ED4119518397C0300B14494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2ED4119618397C0300B14494 /* RainIsDeadLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,22 +372,39 @@
 			productReference = 2E3D0A3C1830F6CA00A119B4 /* RainIsDead.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2E3D0A561830F6CA00A119B4 /* RainIsDeadTests */ = {
+		2ED411B718397C2F00B14494 /* RainIsDeadLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E3D0A6B1830F6CA00A119B4 /* Build configuration list for PBXNativeTarget "RainIsDeadTests" */;
+			buildConfigurationList = 2ED411D418397C2F00B14494 /* Build configuration list for PBXNativeTarget "RainIsDeadLib" */;
 			buildPhases = (
-				2E3D0A531830F6CA00A119B4 /* Sources */,
-				2E3D0A541830F6CA00A119B4 /* Frameworks */,
-				2E3D0A551830F6CA00A119B4 /* Resources */,
+				2ED411B418397C2F00B14494 /* Sources */,
+				2ED411B518397C2F00B14494 /* Frameworks */,
+				2ED411B618397C2F00B14494 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2E3D0A5D1830F6CA00A119B4 /* PBXTargetDependency */,
 			);
-			name = RainIsDeadTests;
-			productName = RainIsDeadTests;
-			productReference = 2E3D0A571830F6CA00A119B4 /* RainIsDeadTests.xctest */;
+			name = RainIsDeadLib;
+			productName = RainIsDeadLib;
+			productReference = 2ED411B818397C2F00B14494 /* libRainIsDeadLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2ED411C418397C2F00B14494 /* RainIsDeadLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ED411D718397C2F00B14494 /* Build configuration list for PBXNativeTarget "RainIsDeadLibTests" */;
+			buildPhases = (
+				2ED411C118397C2F00B14494 /* Sources */,
+				2ED411C218397C2F00B14494 /* Frameworks */,
+				2ED411C318397C2F00B14494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ED411CA18397C2F00B14494 /* PBXTargetDependency */,
+			);
+			name = RainIsDeadLibTests;
+			productName = RainIsDeadLibTests;
+			productReference = 2ED411C518397C2F00B14494 /* RainIsDeadLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -313,10 +414,10 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RID;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jean-Jacques Mérillon";
 				TargetAttributes = {
-					2E3D0A561830F6CA00A119B4 = {
+					2ED411C418397C2F00B14494 = {
 						TestTargetID = 2E3D0A3B1830F6CA00A119B4;
 					};
 				};
@@ -334,7 +435,8 @@
 			projectRoot = "";
 			targets = (
 				2E3D0A3B1830F6CA00A119B4 /* RainIsDead */,
-				2E3D0A561830F6CA00A119B4 /* RainIsDeadTests */,
+				2ED411B718397C2F00B14494 /* RainIsDeadLib */,
+				2ED411C418397C2F00B14494 /* RainIsDeadLibTests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,12 +452,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E3D0A551830F6CA00A119B4 /* Resources */ = {
+		2ED411C318397C2F00B14494 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E3D0A801831387800A119B4 /* placeCompletionResponse.json in Resources */,
-				2E3D0A631830F6CA00A119B4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,42 +467,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3D0A501830F6CA00A119B4 /* RIDAppDelegate.m in Sources */,
-				2E3D0A7A1830FEF300A119B4 /* RIDCompletionHelper.m in Sources */,
 				2E3D0A8518313F4E00A119B4 /* RIDPlaceListViewController.m in Sources */,
-				2E318BF518350F6A00BE935E /* RIDFavoritePlacesHelper.m in Sources */,
-				2E3D0A89183148B800A119B4 /* RIDPlaceRainHelper.m in Sources */,
-				2E3D0A751830F83000A119B4 /* RIDPlaceCompletionRequestHelper.m in Sources */,
-				2E3D0A8C1831494A00A119B4 /* RIDPlaceRainRequestHelper.m in Sources */,
 				2E318C011835660500BE935E /* RIDPlaceCell.m in Sources */,
 				2E3D0A4C1830F6CA00A119B4 /* main.m in Sources */,
-				2E318C051835897A00BE935E /* UIColor+Adds.m in Sources */,
-				2E3D0A9118317DA900A119B4 /* RIDRainPeriod.m in Sources */,
-				2E3D0A9418317FAE00A119B4 /* RIDRainView.m in Sources */,
+				2ED4118618390E1800B14494 /* RIDCompletionPlaceTableViewCell.m in Sources */,
 				2E318BFE1835527F00BE935E /* RIDPlacesViewController.m in Sources */,
-				2E3D0A711830F74300A119B4 /* RIDPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E3D0A531830F6CA00A119B4 /* Sources */ = {
+		2ED411B418397C2F00B14494 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E3D0A7E1831377200A119B4 /* RIDCompletionHelperTest.m in Sources */,
-				2E3D0A8E1831499000A119B4 /* RIDPlaceRainRequestHelperTest.m in Sources */,
-				2E3D0A771830F8C600A119B4 /* RIDPlaceCompletionRequestHelperTests.m in Sources */,
-				2E3D0A7C1831362E00A119B4 /* RIDPlaceTest.m in Sources */,
-				2E318BF718351BD100BE935E /* RIDFavoritePlacesHelperTest.m in Sources */,
-				2E318BFA18354B8300BE935E /* RIDTestObserver.m in Sources */,
+				2ED411E218397CFD00B14494 /* RIDPlaceRainRequestHelper.m in Sources */,
+				2ED411E318397CFD00B14494 /* RIDPlaceRainHelper.m in Sources */,
+				2ED411E018397CFD00B14494 /* RIDPlaceCompletionRequestHelper.m in Sources */,
+				2ED411E718397D1200B14494 /* RIDFavoritePlacesHelper.m in Sources */,
+				2ED411E418397CFD00B14494 /* RIDGeolocalisationRequestHelper.m in Sources */,
+				2ED411E618397D0A00B14494 /* RIDRainPeriod.m in Sources */,
+				2ED411E818397D4E00B14494 /* UIColor+Adds.m in Sources */,
+				2ED411E118397CFD00B14494 /* RIDCompletionHelper.m in Sources */,
+				2ED411ED1839802B00B14494 /* RIDGeolocalisationHelper.m in Sources */,
+				2ED411E918397D5400B14494 /* RIDRainView.m in Sources */,
+				2ED411E518397D0A00B14494 /* RIDPlace.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ED411C118397C2F00B14494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ED411DA18397CEC00B14494 /* RIDPlaceTest.m in Sources */,
+				2ED411DF18397CEC00B14494 /* RIDGeolocalisationRequestHelperTest.m in Sources */,
+				2ED411DE18397CEC00B14494 /* RIDPlaceRainRequestHelperTest.m in Sources */,
+				2ED411DD18397CEC00B14494 /* RIDCompletionHelperTest.m in Sources */,
+				2ED411DC18397CEC00B14494 /* RIDPlaceCompletionRequestHelperTests.m in Sources */,
+				2ED411DB18397CEC00B14494 /* RIDFavoritePlacesHelperTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2E3D0A5D1830F6CA00A119B4 /* PBXTargetDependency */ = {
+		2ED411CA18397C2F00B14494 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2E3D0A3B1830F6CA00A119B4 /* RainIsDead */;
-			targetProxy = 2E3D0A5C1830F6CA00A119B4 /* PBXContainerItemProxy */;
+			target = 2ED411B718397C2F00B14494 /* RainIsDeadLib */;
+			targetProxy = 2ED411C918397C2F00B14494 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,6 +533,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		2E4B4D7F1836E74900BCE5D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E4B4D801836E74900BCE5D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -430,7 +548,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -469,7 +586,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -526,10 +642,37 @@
 			};
 			name = Release;
 		};
-		2E3D0A6C1830F6CA00A119B4 /* Debug */ = {
+		2ED411D518397C2F00B14494 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/RainIsDeadLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RainIsDeadLib/RainIsDeadLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2ED411D618397C2F00B14494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/RainIsDeadLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RainIsDeadLib/RainIsDeadLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2ED411D818397C2F00B14494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RainIsDead.app/RainIsDead";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -537,28 +680,21 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RainIsDead/RainIsDead-Prefix.pch";
+				GCC_PREFIX_HEADER = "RainIsDeadLib/RainIsDeadLib-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_UNDECLARED_SELECTOR = NO;
-				INFOPLIST_FILE = "RainIsDeadTests/RainIsDeadTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-				);
+				INFOPLIST_FILE = "RainIsDeadLibTests/RainIsDeadLibTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		2E3D0A6D1830F6CA00A119B4 /* Release */ = {
+		2ED411D918397C2F00B14494 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RainIsDead.app/RainIsDead";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -566,14 +702,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RainIsDead/RainIsDead-Prefix.pch";
-				GCC_WARN_UNDECLARED_SELECTOR = NO;
-				INFOPLIST_FILE = "RainIsDeadTests/RainIsDeadTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-				);
+				GCC_PREFIX_HEADER = "RainIsDeadLib/RainIsDeadLib-Prefix.pch";
+				INFOPLIST_FILE = "RainIsDeadLibTests/RainIsDeadLibTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -601,11 +731,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E3D0A6B1830F6CA00A119B4 /* Build configuration list for PBXNativeTarget "RainIsDeadTests" */ = {
+		2ED411D418397C2F00B14494 /* Build configuration list for PBXNativeTarget "RainIsDeadLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E3D0A6C1830F6CA00A119B4 /* Debug */,
-				2E3D0A6D1830F6CA00A119B4 /* Release */,
+				2ED411D518397C2F00B14494 /* Debug */,
+				2ED411D618397C2F00B14494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ED411D718397C2F00B14494 /* Build configuration list for PBXNativeTarget "RainIsDeadLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ED411D818397C2F00B14494 /* Debug */,
+				2ED411D918397C2F00B14494 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

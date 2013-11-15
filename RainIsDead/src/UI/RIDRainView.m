@@ -10,6 +10,11 @@
 #import "RIDRainPeriod.h"
 #import "UIColor+Adds.h"
 
+@interface RIDRainPeriod(RIDRainView)
+-(CGRect)rectForPeriodeInRect:(CGRect)rect;
+@end
+
+
 @interface RIDRainView()
 @end
 
@@ -74,7 +79,6 @@ static NSString *kvoContext = @"RIDRainViewKvoContext";
 -(UILabel *)createDateLabel{
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.shadowColor = [UIColor whiteColor];
-    
     label.font = [UIFont systemFontOfSize:9];
     [self addSubview:label];
     return label;
@@ -102,18 +106,26 @@ static NSString *kvoContext = @"RIDRainViewKvoContext";
     return self;
 }
 
+-(BOOL)isPeriodeViewCorrectlyInitializedWihtRainPeriods{
+    return ([_periodViews count] == ([self.place.rainPeriods count]-1) );
+}
+
+#define kMinimumRainPeriodesCount 3
+-(BOOL)hasEnoughRainPeriodes{
+    return ([_periodViews count] >= kMinimumRainPeriodesCount);
+}
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    if ([_periodViews count] != ([self.place.rainPeriods count]-1) ) {
+    if (![self isPeriodeViewCorrectlyInitializedWihtRainPeriods]) {
         [self reloadSubviews];
         [self updateDatesLabels];
     }
 
     [self layoutDatesLabels];
 
-    if ([_periodViews count]<2) {
+    if (![self hasEnoughRainPeriodes]) {
         [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
         return;
     }
@@ -126,30 +138,18 @@ static NSString *kvoContext = @"RIDRainViewKvoContext";
     
     NSTimeInterval startTime = [[[self.place.rainPeriods firstObject] startDate] timeIntervalSince1970];
     NSTimeInterval endTime = [[[self.place.rainPeriods lastObject] startDate] timeIntervalSince1970];
-    NSTimeInterval periodLength = endTime - startTime;
+    NSTimeInterval periodDuration = endTime - startTime;
     CGFloat viewWidth = CGRectGetWidth(self.bounds);
     CGRect periodFrame = self.bounds;
     
     for (int i=0 ; i<[_periodViews count] ; i++) {
         NSTimeInterval curentPeriodStartTime = [[[self.place.rainPeriods objectAtIndex:i] startDate] timeIntervalSince1970];
         NSTimeInterval curentPeriodEndTime = [[[self.place.rainPeriods objectAtIndex:i+1] startDate] timeIntervalSince1970];
-        NSTimeInterval curentPeriodLength = curentPeriodEndTime - curentPeriodStartTime;
-        periodFrame.size.width = (viewWidth * curentPeriodLength / periodLength) - 1;
-        
+        NSTimeInterval curentPeriodDuration = curentPeriodEndTime - curentPeriodStartTime;
+        periodFrame.size.width = (viewWidth * curentPeriodDuration / periodDuration) - 1;
+        periodFrame.size.height = CGRectGetHeight(self.bounds) - labelHeight;
         RIDRainPeriod *period = [self.place.rainPeriods objectAtIndex:i];
-        if (period.type == 0) {
-            periodFrame.size.height = 0.0f;
-        } else if (period.type == 1) {
-            periodFrame.size.height =  1.0f;
-        } else if (period.type == 2) {
-            periodFrame.size.height = 1.0f * ( CGRectGetHeight(self.bounds) - labelHeight ) / 3.0f;
-        } else if (period.type == 3) {
-            periodFrame.size.height = 2.0f * ( CGRectGetHeight(self.bounds) - labelHeight ) / 3.0f;
-        } else  {
-            periodFrame.size.height = 3.0f * ( CGRectGetHeight(self.bounds) - labelHeight ) / 3.0f;
-        }
-        periodFrame.origin.y = CGRectGetHeight(self.bounds) - CGRectGetHeight(periodFrame) - labelHeight;
-        
+        periodFrame = [period rectForPeriodeInRect:periodFrame];
         UIView *currenView = [_periodViews objectAtIndex:i];
         currenView.frame = periodFrame;
         periodFrame.origin.x = CGRectGetMaxX(periodFrame) + 1;
@@ -219,6 +219,43 @@ static NSString *kvoContext = @"RIDRainViewKvoContext";
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+}
+
+@end
+
+
+@implementation RIDRainPeriod(RIDRainView)
+
+-(CGRect)rectForPeriodeInRect:(CGRect)rect{
+    CGRect outFrame = rect;
+    switch (self.type) {
+        case RIDRainPeriodTypeNoData:
+            outFrame.size.height = 0.0f;
+            break;
+
+        case RIDRainPeriodTypeNoRain:
+            outFrame.size.height =  1.0f;
+            break;
+
+        case RIDRainPeriodTypeSmallRain:
+            outFrame.size.height = 1.0f * (CGRectGetHeight(rect)) / 3.0f;
+            break;
+
+        case RIDRainPeriodTypeRain:
+            outFrame.size.height = 2.0f * (CGRectGetHeight(rect)) / 3.0f;
+            break;
+
+        case RIDRainPeriodTypeBigRain:
+            outFrame.size.height = 3.0f * (CGRectGetHeight(rect)) / 3.0f;
+            break;
+
+        default:
+            outFrame.size.height = 0.0f;
+            break;
+    }
+
+    outFrame.origin.y = CGRectGetHeight(rect) - CGRectGetHeight(outFrame);
+    return outFrame;
 }
 
 @end

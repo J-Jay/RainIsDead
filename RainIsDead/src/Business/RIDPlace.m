@@ -45,7 +45,9 @@
     self.indicatif = [decoder decodeObjectForKey:@"indicatif"];
     self.codePostal = [decoder decodeObjectForKey:@"codePostal"];
     self.couvertPluie = [decoder decodeBoolForKey:@"couvertPluie"];
+
     self.rainPeriods = nil;
+    self.lastUpdate = 0;
     
     return self;
 }
@@ -59,3 +61,5 @@
 
 
 @end
+
+

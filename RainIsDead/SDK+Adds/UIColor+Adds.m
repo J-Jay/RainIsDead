@@ -11,21 +11,27 @@
 @implementation UIColor (Adds)
 
 +(UIColor *)colorForPeriod:(RIDRainPeriod *)period{
-    if (period.type == 0) {
-        return [UIColor noRainDataAvailable];
-    } else if (period.type == 1) {
+    
+    if (period.type == RIDRainPeriodTypeNoData) {
+        return [UIColor noRainDataAvailableColor];
+    
+    } else if (period.type == RIDRainPeriodTypeNoRain) {
         return [UIColor noRainColor];
-    } else if (period.type == 2) {
+    
+    } else if (period.type == RIDRainPeriodTypeSmallRain) {
         return [UIColor smallRainColor];
-    } else if (period.type == 3) {
+    
+    } else if (period.type == RIDRainPeriodTypeRain) {
         return [UIColor rainColor];
-    } else  {
+    
+    } else if (period.type == RIDRainPeriodTypeBigRain) {
         return [UIColor bigRainColor];
+    
     }
     return [UIColor clearColor];
 }
 
-+(UIColor *)noRainDataAvailable{
++(UIColor *)noRainDataAvailableColor{
     return [UIColor clearColor];
 }
 

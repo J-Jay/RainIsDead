@@ -15,5 +15,8 @@
 -(RIDPlace *)placeAtIndex:(NSUInteger)index;
 -(void)addPlace:(RIDPlace *)aPlace;
 -(void)removePlaceAtIndex:(NSUInteger)index;
+-(void)movePlaceAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+
+-(void)updateAllPlaces;
 
 @end

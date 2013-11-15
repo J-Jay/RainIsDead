@@ -13,7 +13,7 @@
 
 +(UIColor *)colorForPeriod:(RIDRainPeriod *)period;
 
-+(UIColor *)noRainDataAvailable;
++(UIColor *)noRainDataAvailableColor;
 +(UIColor *)noRainColor;
 +(UIColor *)smallRainColor;
 +(UIColor *)rainColor;

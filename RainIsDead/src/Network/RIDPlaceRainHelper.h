@@ -10,9 +10,10 @@
 #import "RIDPlace.h"
 
 @interface RIDPlaceRainHelper : NSObject
+
+-(void)updateRainInfoForPlace:(RIDPlace *)place;
+-(void)updateRainInfoForPlaces:(NSOrderedSet *)places;
+
 @end
 
 
-@interface  RIDPlace ( RIDPlaceRainHelper )
--(void)updateRainInfos;
-@end

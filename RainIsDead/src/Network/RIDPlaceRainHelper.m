@@ -10,30 +10,76 @@
 #import "RIDPlaceRainRequestHelper.h"
 #import "RIDRainPeriod.h"
 
+@interface  RIDPlace ( RIDPlaceRainHelper )
+-(BOOL)isDataUpToDate;
+@end
+
 
 @interface  RIDRainPeriod (RIDPlaceRainHelper)
 +(instancetype)rainPeriodWithDictionary:(NSDictionary *)json;
 @end
 
 
-@implementation RIDPlaceRainHelper
+@implementation RIDPlaceRainHelper{
+    NSURLSession *_urlSession;
+    NSMutableSet *_refreshingPlaces;
+}
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _refreshingPlaces = [[NSMutableSet alloc] initWithCapacity:10];
+        _urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue currentQueue]];
+    }
+    return self;
+}
 
-+(void)updateRainInfoForPlace:(RIDPlace *)aPlace{
+-(void)updateRainInfoForPlaces:(NSOrderedSet *)places{
+    [places enumerateObjectsUsingBlock:^(RIDPlace *place, NSUInteger idx, BOOL *stop) {
+        [self updateRainInfoForPlace:place];
+    }];
+}
 
-    NSLog(@"[%@] Update Rain info", aPlace.nom);
-    NSURLRequest *request = [RIDPlaceRainRequestHelper urlRequestWithPlace:aPlace];
+-(void)updateRainInfoForPlace:(RIDPlace *)place{
+
+    if (!place.couvertPluie){
+        [self sendStatusNotifications];
+        return;
+    }
     
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    if (place.isDataUpToDate ) {
+        [self sendStatusNotifications];
+        return;
+    }
+    
+    if ([_refreshingPlaces containsObject:place.indicatif]) {
+        [self sendStatusNotifications];
+        return;
+    }
+    
+    [_refreshingPlaces addObject:place.indicatif];
+    
+    NSURLRequest *request = [RIDPlaceRainRequestHelper urlRequestWithPlace:place];
+    
+    NSURLSessionDataTask *sessionDataTask = [_urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+
         NSDictionary *jsonDico = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSArray  *intervalles = [[jsonDico objectForKey:@"result"] objectForKey:@"intervalles"];
         NSMutableArray *periodes = [[NSMutableArray alloc] initWithCapacity:[intervalles count]];
         for (NSDictionary *intervalle in intervalles) {
             [periodes addObject:[RIDRainPeriod rainPeriodWithDictionary:intervalle]];
         }
-        aPlace.rainPeriods = [NSArray arrayWithArray:periodes];
+        place.rainPeriods = [NSArray arrayWithArray:periodes];
+        place.lastUpdate = [NSDate timeIntervalSinceReferenceDate];
+        [_refreshingPlaces removeObject:place.indicatif];
+        [self sendStatusNotifications];
     }];
+    [sessionDataTask resume];
+    [self sendStatusNotifications];
+}
 
+-(void)sendStatusNotifications{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RIDPlaceRainHelperDidUpdateStatus" object:self userInfo:@{@"RIDPlaceRainHelperRequestCount":@([_refreshingPlaces count])}];
 }
 
 @end
@@ -53,14 +99,9 @@
 
 @implementation  RIDPlace ( RIDPlaceRainHelper )
 
-#define uptodateLimit (5*60)
--(void)updateRainInfos{
-    RIDRainPeriod *rainPeriod = [self.rainPeriods firstObject];
-    BOOL hasData = (rainPeriod != nil);
-    NSTimeInterval dataIsUpToDate = ( ABS(rainPeriod.startDate.timeIntervalSinceNow) < uptodateLimit );
-    if (self.couvertPluie && ( !hasData || !dataIsUpToDate) ) {
-        [RIDPlaceRainHelper updateRainInfoForPlace:self];
-    }
+#define uptodateLimit 20
+-(BOOL)isDataUpToDate{
+    return ( [self.rainPeriods count] > 0 && [NSDate timeIntervalSinceReferenceDate] - self.lastUpdate < uptodateLimit );
 }
 
 @end

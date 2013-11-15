@@ -9,7 +9,7 @@
 #import "RIDPlaceListViewController.h"
 #import "RIDCompletionHelper.h"
 #import "RIDPlace.h"
-#import "RIDPlaceRainHelper.h"
+#import "RIDCompletionPlaceTableViewCell.h"
 
 @interface RIDPlaceListViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *places;
@@ -45,23 +45,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *placeCellId = @"PlaceCellId";
-    UITableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:placeCellId];
+    RIDCompletionPlaceTableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:placeCellId];
     if (tableViewCell == nil) {
-        tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:placeCellId];
+        tableViewCell = [[RIDCompletionPlaceTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:placeCellId];
     }
     
     RIDPlace *place = [self.places objectAtIndex:indexPath.row];
-    tableViewCell.textLabel.text = place.nom;
-    tableViewCell.detailTextLabel.text = place.codePostal;
-    
-    if (place.couvertPluie) {
-        tableViewCell.textLabel.textColor = [UIColor blackColor];
-        tableViewCell.detailTextLabel.textColor = [UIColor blackColor];
-    } else {
-        tableViewCell.textLabel.textColor = [UIColor lightGrayColor];
-        tableViewCell.detailTextLabel.textColor = [UIColor lightGrayColor];
-    }
-    
+    [tableViewCell configureForPlace:place];
     return tableViewCell;
 }
 

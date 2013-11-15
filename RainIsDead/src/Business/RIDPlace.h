@@ -15,5 +15,6 @@
 @property (nonatomic, strong) NSString *codePostal;
 @property (nonatomic, assign) BOOL couvertPluie;
 @property (nonatomic, strong) NSArray *rainPeriods;
+@property (nonatomic, assign) NSTimeInterval lastUpdate;
 
 @end

@@ -9,9 +9,12 @@
 #import "RIDFavoritePlacesHelper.h"
 #import "RIDPlaceRainHelper.h"
 
+#define kAutoRefreshInterval 90
+
 NSString * const RIDFavoritePlacesHelperDidSave = @"RIDFavoritePlacesHelperDidSave";
 
 @implementation RIDFavoritePlacesHelper{
+    RIDPlaceRainHelper *_placeRainHelper;
     NSMutableOrderedSet *_places;
     NSTimer *_updateTimer;
 }
@@ -47,11 +50,12 @@ NSString * const RIDFavoritePlacesHelperDidSave = @"RIDFavoritePlacesHelperDidSa
 
 -(id)init{
     if (self = [super init]) {
+        _placeRainHelper = [[RIDPlaceRainHelper alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(favoritePlacesHelperDidSave:) name:RIDFavoritePlacesHelperDidSave object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
         [self loadFavorites];
-        _updateTimer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(updateData:) userInfo:nil repeats:YES];
+        _updateTimer = [NSTimer scheduledTimerWithTimeInterval:kAutoRefreshInterval target:self selector:@selector(updateData:) userInfo:nil repeats:YES];
     }
     return self;
 }
@@ -62,7 +66,7 @@ NSString * const RIDFavoritePlacesHelperDidSave = @"RIDFavoritePlacesHelperDidSa
 
 -(RIDPlace *)placeAtIndex:(NSUInteger)index{
     RIDPlace *place = [_places objectAtIndex:index];
-    [place updateRainInfos];
+    [_placeRainHelper updateRainInfoForPlace:place];
     return place;
 }
 
@@ -73,6 +77,11 @@ NSString * const RIDFavoritePlacesHelperDidSave = @"RIDFavoritePlacesHelperDidSa
 
 -(void)removePlaceAtIndex:(NSUInteger)index{
     [_places removeObjectAtIndex:index];
+    [self saveFavorites];
+}
+
+-(void)movePlaceAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex{
+    [_places moveObjectsAtIndexes:[NSIndexSet indexSetWithIndex:fromIndex] toIndex:toIndex];
     [self saveFavorites];
 }
 
@@ -88,13 +97,17 @@ NSString * const RIDFavoritePlacesHelperDidSave = @"RIDFavoritePlacesHelperDidSa
 }
 
 -(void)applicationWillEnterForeground:(NSNotification *)notif{
+    [self updateAllPlaces];
     [_updateTimer invalidate];
-    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(updateData:) userInfo:nil repeats:YES];
-    [[_places array] makeObjectsPerformSelector:@selector(updateRainInfos) withObject:_updateTimer];
+    _updateTimer = [NSTimer scheduledTimerWithTimeInterval:kAutoRefreshInterval target:self selector:@selector(updateData:) userInfo:nil repeats:YES];
 }
 
 -(void)updateData:(NSTimer *)timer{
-    [[_places array] makeObjectsPerformSelector:@selector(updateRainInfos)];
+    [self updateAllPlaces];
+}
+
+-(void)updateAllPlaces{
+    [_placeRainHelper updateRainInfoForPlaces:_places];
 }
 
 @end
