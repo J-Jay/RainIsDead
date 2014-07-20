@@ -21,6 +21,12 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.searchBar becomeFirstResponder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -60,6 +66,26 @@
     if (place.couvertPluie) {
         [self.delegate placeListViewController:self didSelectPlace:place];
     }
+}
+
+
+-(void)keyboardWillChangeFrame:(NSNotification *)notificaton{
+    
+    double animationDuration = [[[notificaton userInfo] valueForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect finalKeyBoardFrameInScreen = [[[notificaton userInfo] valueForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGRect finalKeyBoardFrame = [self.view convertRect:finalKeyBoardFrameInScreen fromView:nil];
+    
+    CGFloat intersectionBetweenViewAndKeyBoard = CGRectGetHeight(finalKeyBoardFrame);
+    
+    [UIView animateWithDuration:animationDuration animations:^(void){
+        UIEdgeInsets contentInset = self.tableView.contentInset;
+        contentInset.bottom = intersectionBetweenViewAndKeyBoard;
+        self.tableView.contentInset = contentInset;
+        UIEdgeInsets scrollIndicatorInsets = self.tableView.scrollIndicatorInsets;
+        scrollIndicatorInsets.bottom = intersectionBetweenViewAndKeyBoard;
+        self.tableView.scrollIndicatorInsets = scrollIndicatorInsets;
+    }];
+    
 }
 
 @end
