@@ -418,7 +418,7 @@
 				ORGANIZATIONNAME = "Jean-Jacques Mérillon";
 				TargetAttributes = {
 					2ED411C418397C2F00B14494 = {
-						TestTargetID = 2E3D0A3B1830F6CA00A119B4;
+						TestTargetID = 2ED411B718397C2F00B14494;
 					};
 				};
 			};
@@ -673,7 +673,6 @@
 		2ED411D818397C2F00B14494 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RainIsDead.app/RainIsDead";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -687,7 +686,6 @@
 				);
 				INFOPLIST_FILE = "RainIsDeadLibTests/RainIsDeadLibTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -695,7 +693,6 @@
 		2ED411D918397C2F00B14494 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RainIsDead.app/RainIsDead";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -705,7 +702,6 @@
 				GCC_PREFIX_HEADER = "RainIsDeadLib/RainIsDeadLib-Prefix.pch";
 				INFOPLIST_FILE = "RainIsDeadLibTests/RainIsDeadLibTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
